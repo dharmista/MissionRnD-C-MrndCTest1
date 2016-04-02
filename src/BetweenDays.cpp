@@ -28,6 +28,19 @@ struct node{
 	struct node *next;
 };
 
+int findDiff(node * date1, node * date2){
+	int dd = 0, md = 0, yd = 0;
+	//Brute force....
+	//Comparind date
+	dd = (abs(date1->data - date2->data)) * 10 + (abs(date1->next->data - date2->next->data));
+	date1 = date1->next->next;
+	date2 = date2->next->next;
+	md = (abs(date1->data - date2->data)) * 10 + (abs(date1->next->data - date2->next->data));
+	date1 = date1->next->next;
+	date2 = date2->next->next;
+	md = ((abs(date1->next->next->next->data - date2->next->next->next->data)) * 1000 + (abs(date1->next->next->data - date2->next->next->data) * 100 + (abs(date1->next->data - date2->next->data) * 10 + (abs(date1->data - date2->data));
+
+}
 
 int between_days(struct node *date1head, struct node *date2head){
 	return -1;
